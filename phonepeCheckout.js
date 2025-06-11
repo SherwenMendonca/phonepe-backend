@@ -3,8 +3,8 @@ const crypto = require("crypto");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const merchantId = process.env.MERCHANT_ID || "TEST-M23H1OQBC10F4_25061";
-const saltKey = process.env.SALT_KEY || "Y2VhYzljMzMtNGY5ZC00Mzg5LTg5NjQtYmViZDFkMGU2MDkz";
+const merchantId = process.env.MERCHANT_ID || "PGTESTPAYUAT";
+const saltKey = process.env.SALT_KEY || "e522d95d-49fe-46a4-acdb-1349f91958cf";
 const redirectUrl = "https://www.google.com";
 
 app.get("/pay", async (req, res) => {
