@@ -28,7 +28,7 @@ app.get("/pay", async (req, res) => {
   const base64Data = Buffer.from(jsonData).toString("base64");
 
   const stringToSign = base64Data + "/pg/v1/pay" + saltKey;
-  const xVerify = crypto.createHash("sha256").update(stringToSign).digest("hex") + "###1";
+const xVerify = crypto.createHash("sha256").update(stringToSign).digest("hex") + "###1";
 
   try {
     const response = await fetch("https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay", {
