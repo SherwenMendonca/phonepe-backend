@@ -31,7 +31,7 @@ app.get("/pay", async (req, res) => {
   const xVerify = crypto.createHash("sha256").update(stringToSign).digest("hex") + "###1";
 
   try {
-    const response = await fetch("https://api.phonepe.com/apis/hermes/pg/v1/pay", {
+    const response = await fetch("https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
